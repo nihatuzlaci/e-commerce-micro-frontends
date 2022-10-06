@@ -43,8 +43,12 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "container",
       filename: "remoteEntry.js",
-      remotes: {},
-      exposes: {},
+      remotes: {
+        cart: "cart@http://localhost:3001/remoteEntry.js",
+      },
+      exposes: {
+        "./pubsub": "./src/pubsub.js",
+      },
       shared: {
         ...deps,
         react: {

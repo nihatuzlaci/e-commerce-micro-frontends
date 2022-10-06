@@ -57,6 +57,11 @@ module.exports = {
           eager: true,
           requiredVersion: deps["react-dom"],
         },
+        "@chakra-ui/react": {
+          singleton: true,
+          eager: true,
+          requiredVersion: deps["@chakra-ui/react"],
+        },
       },
     }),
     new HtmlWebPackPlugin({

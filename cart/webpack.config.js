@@ -43,8 +43,12 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "cart",
       filename: "remoteEntry.js",
-      remotes: {},
-      exposes: {},
+      remotes: {
+        container: "container@http://localhost:3000/remoteEntry.js",
+      },
+      exposes: {
+        "./Cart": "./src/components/Cart.tsx",
+      },
       shared: {
         ...deps,
         react: {
@@ -56,6 +60,11 @@ module.exports = {
           singleton: true,
           eager: true,
           requiredVersion: deps["react-dom"],
+        },
+        "@chakra-ui/react": {
+          singleton: true,
+          eager: true,
+          requiredVersion: deps["@chakra-ui/react"],
         },
       },
     }),
