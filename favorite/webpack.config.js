@@ -5,14 +5,14 @@ const deps = require("./package.json").dependencies;
 
 module.exports = {
   output: {
-    publicPath: "http://localhost:3002/",
+    publicPath: "http://localhost:3005/",
   },
   mode: "development",
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
   },
   devServer: {
-    port: 3002,
+    port: 3005,
     historyApiFallback: true,
   },
   module: {
@@ -41,10 +41,14 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "header",
+      name: "favorite",
       filename: "remoteEntry.js",
-      remotes: {},
-      exposes: {},
+      remotes: {
+        container: "container@http://localhost:3000/remoteEntry.js",
+      },
+      exposes: {
+        //"./Favorite": "./src/components/Favorite.tsx",
+      },
       shared: {
         ...deps,
         react: {
@@ -61,6 +65,21 @@ module.exports = {
           singleton: true,
           eager: true,
           requiredVersion: deps["@chakra-ui/react"],
+        },
+        "@emotion/react": {
+          singleton: true,
+          eager: true,
+          requiredVersion: deps["@emotion/react"],
+        },
+        "@emotion/styled": {
+          singleton: true,
+          eager: true,
+          requiredVersion: deps["@emotion/styled"],
+        },
+        "framer-motion": {
+          singleton: true,
+          eager: true,
+          requiredVersion: deps["framer-motion"],
         },
       },
     }),
