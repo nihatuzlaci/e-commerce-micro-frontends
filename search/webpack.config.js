@@ -44,7 +44,9 @@ module.exports = {
       name: "search",
       filename: "remoteEntry.js",
       remotes: {},
-      exposes: {},
+      exposes: {
+        "./Search": "./src/components/Search.tsx",
+      },
       shared: {
         ...deps,
         react: {
@@ -61,6 +63,21 @@ module.exports = {
           singleton: true,
           eager: true,
           requiredVersion: deps["@chakra-ui/react"],
+        },
+        "@emotion/react": {
+          singleton: true,
+          eager: true,
+          requiredVersion: deps["@emotion/react"],
+        },
+        "@emotion/styled": {
+          singleton: true,
+          eager: true,
+          requiredVersion: deps["@emotion/styled"],
+        },
+        "framer-motion": {
+          singleton: true,
+          eager: true,
+          requiredVersion: deps["framer-motion"],
         },
       },
     }),

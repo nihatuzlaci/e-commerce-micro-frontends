@@ -5,14 +5,14 @@ const deps = require("./package.json").dependencies;
 
 module.exports = {
   output: {
-    publicPath: "http://localhost:3005/",
+    publicPath: "http://localhost:3002/",
   },
   mode: "development",
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
   },
   devServer: {
-    port: 3005,
+    port: 3002,
     historyApiFallback: true,
   },
   module: {

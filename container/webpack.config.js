@@ -45,6 +45,8 @@ module.exports = {
       filename: "remoteEntry.js",
       remotes: {
         cart: "cart@http://localhost:3001/remoteEntry.js",
+        search: "search@http://localhost:3004/remoteEntry.js",
+        product: "product@http://localhost:3003/remoteEntry.js",
       },
       exposes: {
         "./pubsub": "./src/pubsub.js",
@@ -60,6 +62,26 @@ module.exports = {
           singleton: true,
           eager: true,
           requiredVersion: deps["react-dom"],
+        },
+        "@chakra-ui/react": {
+          singleton: true,
+          eager: true,
+          requiredVersion: deps["@chakra-ui/react"],
+        },
+        "@emotion/react": {
+          singleton: true,
+          eager: true,
+          requiredVersion: deps["@emotion/react"],
+        },
+        "@emotion/styled": {
+          singleton: true,
+          eager: true,
+          requiredVersion: deps["@emotion/styled"],
+        },
+        "framer-motion": {
+          singleton: true,
+          eager: true,
+          requiredVersion: deps["framer-motion"],
         },
       },
     }),

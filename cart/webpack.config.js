@@ -66,6 +66,21 @@ module.exports = {
           eager: true,
           requiredVersion: deps["@chakra-ui/react"],
         },
+        "@emotion/react": {
+          singleton: true,
+          eager: true,
+          requiredVersion: deps["@emotion/react"],
+        },
+        "@emotion/styled": {
+          singleton: true,
+          eager: true,
+          requiredVersion: deps["@emotion/styled"],
+        },
+        "framer-motion": {
+          singleton: true,
+          eager: true,
+          requiredVersion: deps["framer-motion"],
+        },
       },
     }),
     new HtmlWebPackPlugin({
