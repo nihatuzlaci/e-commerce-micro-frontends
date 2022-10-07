@@ -47,7 +47,7 @@ module.exports = {
         container: "container@http://localhost:3000/",
       },
       exposes: {
-        "./ProductList": "./src/components/ProductList.tsx",
+        "./ProductList": "./src/components/ProductList.jsx",
       },
       shared: {
         ...deps,

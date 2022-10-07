@@ -47,7 +47,7 @@ module.exports = {
         container: "container@http://localhost:3000/remoteEntry.js",
       },
       exposes: {
-        //"./Favorite": "./src/components/Favorite.tsx",
+        "./Favorites": "./src/components/Favorites.jsx",
       },
       shared: {
         ...deps,
