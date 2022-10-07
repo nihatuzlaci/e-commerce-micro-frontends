@@ -43,9 +43,11 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "search",
       filename: "remoteEntry.js",
-      remotes: {},
+      remotes: {
+        container: "container@http://localhost:3000/remoteEntry.js",
+      },
       exposes: {
-        "./Search": "./src/components/Search.tsx",
+        "./Search": "./src/components/Search.jsx",
       },
       shared: {
         ...deps,
