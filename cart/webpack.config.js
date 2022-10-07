@@ -47,7 +47,7 @@ module.exports = {
         container: "container@http://localhost:3000/remoteEntry.js",
       },
       exposes: {
-        "./Cart": "./src/components/Cart.tsx",
+        "./Cart": "./src/components/Cart.jsx",
       },
       shared: {
         ...deps,
