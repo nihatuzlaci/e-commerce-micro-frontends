@@ -32,7 +32,7 @@ or
 yarn start
 ```
 
-After running the app, it will run on port `3000`.
+After running the app, app will run on port `3000`.
 
 ```
 localhost:3000
