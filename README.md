@@ -8,12 +8,32 @@ Goal of this project is to learn micro frontends architecture.
 
 After cloning the repo you need to install all dependencies.
 
-But you will see five different React projects (also each of them called fragments), you need to install all dependencies each of them.
+But you will see five different React projects (also each of them called fragments), you need to install all dependencies for each of them.
 
-`npm install`
+```
+npm install
+```
 
 or
 
-`yarn install`
+```
+yarn install
+```
 
+After installing all dependencies for each project, you need to run each of them.
 
+```
+npm start
+```
+
+or
+
+```
+yarn start
+```
+
+After running the app, it will run on port `3000`.
+
+```
+localhost:3000
+```
