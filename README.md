@@ -1,6 +1,6 @@
 # Micro frontends - Webpack Module Federation Plugin
 
-Built a micro frontends app with webpack module federation plugin. Used React library for this app.
+Built a micro frontends project with webpack module federation plugin. Used React library for this project.
 Goal of this project is to learn micro frontends architecture.
 
 
