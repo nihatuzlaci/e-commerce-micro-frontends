@@ -18,7 +18,8 @@ const Product = ({ product }) => {
       position: "bottom-right",
     });
 
-    pubsub.publish("addToCart", product);
+    const cartChanged = new CustomEvent("addToCart", { detail: product });
+    document.dispatchEvent(cartChanged);
   };
 
   const addToFavorite = (favorite) => {

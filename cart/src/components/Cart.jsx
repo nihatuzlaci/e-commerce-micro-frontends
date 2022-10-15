@@ -9,16 +9,14 @@ import {
   Button,
 } from "@chakra-ui/react";
 
-import { pubsub } from "container/pubsub";
-
 import CartItem from "./CartItem";
 
 const Cart = () => {
   const [cartList, setCartList] = useState([]);
 
   const getProducts = () => {
-    pubsub.subscribe("addToCart", (data) => {
-      setCartList((prevCart) => [...prevCart, data]);
+    document.addEventListener("addToCart", (e) => {
+      setCartList((prevCart) => [...prevCart, e.detail]);
     });
   };
 
