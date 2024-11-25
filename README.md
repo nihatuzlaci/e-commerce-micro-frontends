@@ -1,14 +1,11 @@
 # Micro frontends - Webpack Module Federation Plugin
 
-I built a micro frontends project with the webpack module federation plugin. used the React library for this project. 
-The goal of this project is to learn micro frontends architecture.
+Developed a micro frontends project using Webpack Module Federation and React to explore and understand micro frontends architecture. The project focused on modular application development, enabling component sharing and independent deployments for enhanced scalability.
 
 
 ## Getting Started
 
-After cloning the repo, you need to install all the dependencies.
-
-But you will see five different React projects (each of them called fragments). You need to install all the dependencies for each of them.
+After cloning the repository, you must install dependencies for both the root project and each of the five React fragments individually.
 
 ```
 npm install
@@ -20,7 +17,7 @@ or
 yarn install
 ```
 
-After installing all the dependencies for each project, you need to run each of them.
+After installing all dependencies for each project, you need to start each one individually.
 
 ```
 npm start
